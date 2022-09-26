@@ -4,7 +4,9 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "test": "jest --watchALL --no-cache",
+    "test:ci": "jest"
   },
   "keywords": [],
   "author": "",
