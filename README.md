@@ -1,3 +1,3 @@
-# DevOps CI/CD pipeline example
+# DevOps CI/CD pipeline
 
 CI/CD pipeline example
