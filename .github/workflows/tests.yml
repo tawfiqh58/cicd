@@ -1,7 +1,7 @@
 name: tests
 
 on:
-  pull_reqests
+  pull_request
 
 jobs: 
   build: 
