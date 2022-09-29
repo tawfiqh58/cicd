@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: app-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: myserver
+    spec:
+      containers:
+        - name: myserver
+          image: mydockerrepo/myapp
+          env:
+            - name: DB_URL
+              value: 'mongodb://mongo-service:27017/myapp'
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: app-service
+spec:
+  selector:
+    app: myserver
+    ports:
+      - name: myserver
+        protocol: TCP
+        port: 5000
+        targetPort: 5000
